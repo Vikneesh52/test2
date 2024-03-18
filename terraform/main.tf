@@ -13,7 +13,7 @@ resource "azurerm_databricks_workspace" "this" {
   resource_group_name         = azurerm_resource_group.this.name
   location                    = azurerm_resource_group.this.location
   sku                         = "premium" // Options: Standard, Premium, Trial
-  managed_resource_group_name = azurerm_resource_group.this.name // Use the same resource group as the workspace for managed resources
+  #managed_resource_group_name = azurerm_resource_group.this.name // Use the same resource group as the workspace for managed resources
 
   tags = {
     environment = "dev"
