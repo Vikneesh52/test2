@@ -19,6 +19,4 @@ resource "azurerm_databricks_workspace" "this" {
   tags = {
     environment = "dev"
   }
-
-  depends_on = [azurerm_resource_group.this]
 }
