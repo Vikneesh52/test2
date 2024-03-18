@@ -7,7 +7,7 @@ resource "azurerm_resource_group" "this" {
     environment = "dev"
   }
 }
-
+#
 # Create the Databricks Workspace
 resource "azurerm_databricks_workspace" "this" {
   name                        = "helooo-workspace"
