@@ -15,8 +15,10 @@ resource "azurerm_databricks_workspace" "this" {
   location                    = azurerm_resource_group.this.location
   sku                         = "trial" // Options: Standard, Premium, Trial
   managed_resource_group_name = azurerm_resource_group.this.name // Use the same resource group as the workspace for managed resources
-  depends_on                  = [azurerm_resource_group.this]
+
   tags = {
     environment = "dev"
   }
+
+  depends_on = [azurerm_resource_group.this]
 }
