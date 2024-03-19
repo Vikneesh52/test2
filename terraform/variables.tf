@@ -4,7 +4,7 @@ variable "rgname" {
   description = "This variable defines the resource group name used to build resources"
 }
 
-# workspace name
+# Workspace name
 variable "wrkspname" {
   type        = string
   description = "This variable defines the workspace name used to build resources"
@@ -23,7 +23,7 @@ variable "location" {
   default     = "East US2"
 }
 
-#SKU type
+# SKU type
 variable "sku" {
   type        = string
   description = "This variable defines the account type"
@@ -31,7 +31,7 @@ variable "sku" {
 
 variable "azure_workspace_resource_id" {
   type        = string
-  description = "This variable defines the azure wrkspce id"
+  description = "This variable defines the azure workspace id"
 }
 
 variable "host" {
