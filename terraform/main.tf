@@ -22,7 +22,7 @@ resource "azurerm_databricks_workspace" "this" {
 }
 
 # Create Databricks Cluster
-resource "azurerm_databricks_cluster" "this" {
+resource "databricks_cluster" "this" {
   name                 = "heloo-data"
   resource_group_name  = azurerm_resource_group.this.name
   location             = azurerm_resource_group.this.location
