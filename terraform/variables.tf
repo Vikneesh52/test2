@@ -48,20 +48,24 @@ variable "host" {
 variable "aad_tenant_id" {
   type        = string
   description = "The id of the Azure Tenant to which all subscriptions belong"
+  default     = "29dfe2bd-dc40-4934-8c75-8419c7ab1e30"
 }
 
 variable "aad_subscription_id" {
   type        = string
   description = "The id of the Azure Subscription"
+  default     = "31324520-9b0f-447e-98f4-c8ac3667708d"
 }
 
 variable "aad_client_id" {
   type        = string
   description = "The client id of the Service Principal for interacting with Azure resources"
+  default     = ""
 }
 
 variable "aad_client_secret" {
   type        = string
   description = "The client secret of the Service Principal for interacting with Azure resources"
   sensitive   = true
+  default     = ""
 }
