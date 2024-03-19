@@ -13,7 +13,6 @@ provider "azurerm" {
   features {}
   tenant_id       = var.aad_tenant_id
   subscription_id = var.aad_subscription_id
-  use_cli = false
 }
 
 provider "databricks" {
