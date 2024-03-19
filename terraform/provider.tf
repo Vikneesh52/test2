@@ -12,6 +12,6 @@ terraform {
 provider "azurerm" {
   features {}
 }
-provider "azurerm_databricks" {
+provider "databricks" {
   features {}
 }
