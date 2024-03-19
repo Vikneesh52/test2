@@ -32,8 +32,4 @@ resource "databricks_cluster" "this" {
     min_workers = 1
     max_workers = 10
   }
-
-  azure_client_secret = var.azure_client_secret
-  azure_client_id     = var.azure_client_id
-  azure_tenant_id     = var.azure_tenant_id
 }
