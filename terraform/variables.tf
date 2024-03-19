@@ -60,12 +60,12 @@ variable "aad_subscription_id" {
 variable "aad_client_id" {
   type        = string
   description = "The client id of the Service Principal for interacting with Azure resources"
-  default     = ""
+  default     = "99349683-b6fe-40ca-9d83-1c9e4bc08aa0"
 }
 
 variable "aad_client_secret" {
   type        = string
   description = "The client secret of the Service Principal for interacting with Azure resources"
   sensitive   = true
-  default     = ""
+  default     = "QFq8Q~sk1gQkOUvRfGTyo.u2eDYRsHqozj_SodfU"
 }
