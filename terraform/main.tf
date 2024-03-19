@@ -1,6 +1,6 @@
 # Create the Resource Group
 resource "azurerm_resource_group" "this" {
-  name     = "helooo-rg"
+  name     = "heloootest-rg"
   location = "East US2"
 
   tags = {
@@ -10,7 +10,7 @@ resource "azurerm_resource_group" "this" {
 
 # Create the Databricks Workspace
 resource "azurerm_databricks_workspace" "this" {
-  name                        = "helooo-workspace"
+  name                        = "heloootest-workspace"
   resource_group_name         = azurerm_resource_group.this.name
   location                    = azurerm_resource_group.this.location
   sku                         = "premium" // Options: Standard, Premium, Trial
@@ -23,7 +23,7 @@ resource "azurerm_databricks_workspace" "this" {
 
 # Create Databricks Cluster
 resource "databricks_cluster" "this" {
-  cluster_name            =  "helooo-data"
+  cluster_name            =  "heloootest-data"
   spark_version           = "14.1-scala2.12"
   node_type_id            = "Standard_DS3_v2"
   num_workers             = 1  # Set num_workers to 1 for a single-node cluster
