@@ -13,6 +13,6 @@ provider "azurerm" {
   features {}
 }
 provider "databricks" {
-  azure_workspace_resource_id = module.databricks_workspace.databricks_workspace_id
-  host                        = module.databricks_workspace.databricks_host
+  azure_workspace_resource_id = "638868633463028"
+  host                        = "adb-638868633463028.8.azuredatabricks.net"
 }
