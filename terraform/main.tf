@@ -26,11 +26,10 @@ resource "databricks_cluster" "this" {
   cluster_name            =  "helooo-data"
   spark_version           = "14.1-scala2.12"
   node_type_id            = "Standard_DS3_v2"
-  num_workers             = 0  # Setting num_workers to 0 for a single-node cluster
+  num_workers             = 1  # Set num_workers to 1 for a single-node cluster
   autotermination_minutes = 20
   autoscale {
-    min_workers = 0  # Also set min_workers to 0 for a single-node cluster
-    max_workers = 1  # Adjust max_workers accordingly for a single-node cluster
+    min_workers = 1  # Set min_workers to 1 for a single-node cluster
+    max_workers = 1  # Set max_workers to 1 for a single-node cluster
   }
-  single_node             = true  # Specify single_node property as true
 }
