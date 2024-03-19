@@ -24,7 +24,7 @@
     resource "databricks_cluster" "this" {
     cluster_name            =  "heloootest-data"
     spark_version           = "7.3.x-scala2.12"
-    node_type_id            = "Standard_DS3_v2"
+    node_type_id            = "Standard_DS3_v3"
     num_workers             = 1  # Set num_workers to 1 for a single-node cluster
     autotermination_minutes = 20
     autoscale {
