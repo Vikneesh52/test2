@@ -51,7 +51,7 @@ jobs:
       with:
         tf_actions_version: 0.14.8
         tf_actions_subcommand: 'cli'
-        tf_actions_cli_args: 'plan -var-file=terraform.tfvars'
+        tf_actions_cli_args: 'plan -var-file=dev.tfvars'
         tf_actions_working_dir: "./environments"
 
 
