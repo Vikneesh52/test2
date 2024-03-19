@@ -22,21 +22,13 @@ resource "azurerm_databricks_workspace" "this" {
 }
 
 # Create Databricks Cluster
-data "databricks_node_type" "smallest" {
-  local_disk = true
-}
-
-data "databricks_spark_version" "latest_lts" {
-  long_term_support = true
-}
-
-resource "databricks_cluster" "shared_autoscaling" {
-  cluster_name            = "Shared Autoscaling"
-  spark_version           = data.databricks_spark_version.latest_lts.id
-  node_type_id            = data.databricks_node_type.smallest.id
-  autotermination_minutes = 20
-  autoscale {
-    min_workers = 1
-    max_workers = 50
-  }
+resource "azurerm_databricks_cluster" "this" {
+  name                 = "heloo-data"
+  resource_group_name  = azurerm_resource_group.example.name
+  location             = azurerm_resource_group.example.location
+  workspace_name       = azurerm_databricks_workspace.example.name
+  node_type_id         = "Standard_DS3_v2"
+  num_workers          = 2
+  spark_version        = "7.0.x-scala2.12"
+  auto_termination_minutes = 30
 }
