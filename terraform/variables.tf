@@ -3,6 +3,7 @@ variable "rgname" {
   type        = string
   description = "This variable defines the resource group name used to build resources"
 #  default     = "datasanddlhrg01"
+  default = ""
 }
 
 # Workspace name
