@@ -1,3 +1,32 @@
+variable "aad_tenant_id" {
+  type        = string
+  description = "The id of the Azure Tenant to which all subscriptions belong"
+  #  default     = "29dfe2bd-dc40-4934-8c75-8419c7ab1e30"
+  default = ""
+}
+
+variable "aad_subscription_id" {
+  type        = string
+  description = "The id of the Azure Subscription"
+  #  default     = "31324520-9b0f-447e-98f4-c8ac3667708d"
+  default = ""
+}
+
+variable "aad_client_id" {
+  type        = string
+  description = "The client id of the Service Principal for interacting with Azure resources"
+  #  default     = "99349683-b6fe-40ca-9d83-1c9e4bc08aa0"
+  default = ""
+}
+
+variable "aad_client_secret" {
+  type        = string
+  description = "The client secret of the Service Principal for interacting with Azure resources"
+  sensitive   = true
+  #  default     = "QFq8Q~sk1gQkOUvRfGTyo.u2eDYRsHqozj_SodfU"
+  default = ""
+}
+
 # Resource group name
 variable "rgname" {
   type        = string
@@ -49,34 +78,5 @@ variable "host" {
   type        = string
   description = "This variable defines the host"
 #  default     = "adb-638868633463028.8.azuredatabricks.net"
-  default = ""
-}
-
-variable "aad_tenant_id" {
-  type        = string
-  description = "The id of the Azure Tenant to which all subscriptions belong"
-#  default     = "29dfe2bd-dc40-4934-8c75-8419c7ab1e30"
-  default = ""
-}
-
-variable "aad_subscription_id" {
-  type        = string
-  description = "The id of the Azure Subscription"
-#  default     = "31324520-9b0f-447e-98f4-c8ac3667708d"
-  default = ""
-}
-
-variable "aad_client_id" {
-  type        = string
-  description = "The client id of the Service Principal for interacting with Azure resources"
-#  default     = "99349683-b6fe-40ca-9d83-1c9e4bc08aa0"
-  default = ""
-}
-
-variable "aad_client_secret" {
-  type        = string
-  description = "The client secret of the Service Principal for interacting with Azure resources"
-  sensitive   = true
-#  default     = "QFq8Q~sk1gQkOUvRfGTyo.u2eDYRsHqozj_SodfU"
   default = ""
 }
