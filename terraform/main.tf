@@ -24,12 +24,16 @@ resource "azurerm_databricks_workspace" "this" {
 # Create Databricks Cluster
 resource "databricks_cluster" "this" {
   cluster_name            =  "helooo-data"
-  spark_version           = "7.0.x-scala2.12"
-  node_type_id               = "Standard_DS3_v2"
-  num_workers                = 2
+  spark_version           = "14.1-scala2.12"
+  node_type_id            = "Standard_DS3_v2"
+  num_workers             = 2
   autotermination_minutes = 20
   autoscale {
     min_workers = 1
     max_workers = 10
   }
+
+  azure_client_secret = var.azure_client_secret
+  azure_client_id     = var.azure_client_id
+  azure_tenant_id     = var.azure_tenant_id
 }
