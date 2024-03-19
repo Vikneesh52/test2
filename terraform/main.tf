@@ -23,12 +23,13 @@ resource "azurerm_databricks_workspace" "this" {
 
 # Create Databricks Cluster
 resource "databricks_cluster" "this" {
-  name                 = "heloo-data"
-  resource_group_name  = azurerm_resource_group.this.name
-  location             = azurerm_resource_group.this.location
-  workspace_name       = azurerm_databricks_workspace.this.name
-  node_type_id         = "Standard_DS3_v2"
-  num_workers          = 2
-  spark_version        = "7.0.x-scala2.12"
-  auto_termination_minutes = 30
+  cluster_name            =  "helooo-data"
+  spark_version           = "7.0.x-scala2.12"
+  node_type_id               = "Standard_DS3_v2"
+  num_workers                = 2
+  autotermination_minutes = 20
+  autoscale {
+    min_workers = 1
+    max_workers = 10
+  }
 }
