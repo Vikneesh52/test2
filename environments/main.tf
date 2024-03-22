@@ -21,7 +21,7 @@ resource "azurerm_databricks_workspace" "this" {
 }
 
 resource "databricks_cluster" "this" {
-  name               = "example-cluster"
+  cluster_name               = "example-cluste"
   resource_group_name = azurerm_resource_group.this.name
   location           = azurerm_resource_group.this.location
   num_workers        = 2
@@ -31,6 +31,6 @@ resource "databricks_cluster" "this" {
 #    spark.speculation = "false"
 #  }
   tags = {
-    environment = "production"
+    environment = "dev"
   }
 }
