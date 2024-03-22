@@ -12,3 +12,4 @@ host                        = "adb-638868633463028.8.azuredatabricks.net"
 cluster_name                    = "My Cluster"
 cluster_autotermination_minutes = 60
 cluster_num_workers             = 1
+spark_version   = "7.3.x-scala2.12"
