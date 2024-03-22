@@ -22,11 +22,11 @@ resource "azurerm_databricks_workspace" "this" {
 
 resource "databricks_cluster" "this" {
   cluster_name               = "example-cluste"
-  resource_group_name = azurerm_resource_group.this.name
-  location           = azurerm_resource_group.this.location
-  num_workers        = 2
-  node_type_id       = "Standard_DS3_v2"
-  spark_version      = "7.3.x-scala2.12"
+  resource_group_name        = azurerm_resource_group.this.name
+  location                   = azurerm_resource_group.this.location
+  num_workers                = 2
+  node_type_id               = "Standard_DS3_v2"
+  spark_version              = "7.3.x-scala2.12"
 #  spark_conf {
 #    spark.speculation = "false"
 #  }
