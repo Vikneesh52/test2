@@ -30,7 +30,4 @@ resource "databricks_cluster" "this" {
 #  spark_conf {
 #    spark.speculation = "false"
 #  }
-  tags = {
-    environment = "dev"
-  }
 }
